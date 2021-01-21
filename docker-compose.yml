@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+    php:
+        build: ./
+        depends_on:
+            - pgsql
+            - mysql
+        volumes:
+            - ./:/contrib
+
+    pgsql:
+        image: postgres:9.6
+        restart: always
+        env_file:
+            - .env.local
+
+    mysql:
+        image: mysql:8.0.3
+        restart: always
+        env_file:
+            - .env.local

@@ -2,3 +2,10 @@ phpunit.xml
 vendor/
 composer.lock
 .idea/
+.env.local
+composer.phar
+docker-compose.override.yml
+mysql.phpunit.xml.dist
+pgsql.phpunit.xml.dist
+.phpunit.result.cache
+xdebug.ini
